@@ -115,7 +115,7 @@ include "koneksi.php";
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#article">History</a>
+                        <a class="nav-link" href="#article">Article</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#gallery">Gallery</a>
@@ -169,7 +169,7 @@ include "koneksi.php";
         <!--article begin-->
           <section id="article" class="text-center p-5">
             <div class="container">
-              <h1 class="fw-bold display-4 pb-3">History</h1>
+              <h1 class="fw-bold display-4 pb-3"><Article></Article></h1>
               <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
                 <?php
                 $sql = "SELECT * FROM article ORDER BY tanggal DESC";
