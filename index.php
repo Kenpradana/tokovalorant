@@ -7,7 +7,7 @@ include "koneksi.php";
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Jennas's Studio</title>
+        <title>Toko Valorant</title>
         <link rel="icon" href="img/foto-logo.png"/>
         <link 
           rel="stylesheet" 
