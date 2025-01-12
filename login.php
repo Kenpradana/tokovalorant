@@ -56,94 +56,84 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="icon" href="img/Logo.jpg" />
 </head>
-<body>
-  <!-- Awal Login -->
-<div class = " isi text-center p-5" style="background-color: rgb(4, 212, 160);"> 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h1 class="fw-bold display-4 pb-3">Login</h1>
-  <div class="row">
-    <div class="col-12 col-sm-8 col-md-6 m-auto">
-      <div class="card border-0 shadow rounded-5">
-        <div class="card-body">
-          <div class="text-center mb-3">
-            <i class="bi bi-person-circle h1 display-4"></i>
-            <p>Valorant Shop</p>
-            <hr />
-          </div>
-          <!-- Form Login -->
-          <form action="" method="post">
-            <input
-              type="text"
-              name="user"
-              class="form-control my-4 py-2 rounded-4"
-              placeholder="Username"
-            />
-            <input
-              type="password"
-              name="pass"
-              class="form-control my-4 py-2 rounded-4"
-              placeholder="Password"
-            />
-            <div class="text-center my-3 d-grid">
-              <button class="btn btn-danger rounded-4">Login</button>
+<body style="background-color: rgb(4, 212, 160);">
+    <div class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-12 col-sm-8 col-md-6 m-auto">
+                <div class="card border-0 shadow rounded-5">
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <img src="img/Logo.jpg" alt="Logo" width="60" height="60">
+                            <p>Welcome To Toko Valorant</p>
+                            <hr/>
+                        </div>
+                        <form action="" method="post">
+                            <input
+                            type="text"
+                            name="user"
+                            class="form-control my-4 py-2 rounded-4"
+                            placeholder="Username"
+                            />
+                            <input
+                            type="password"
+                            name="pass"
+                            class="form-control my-4 py-2 rounded-4"
+                            placeholder="Password"
+                            />
+                            <div class="text-center my-3 d-grid">
+                            <button style="background-color: rgb(4, 212, 160);" class=" rounded-4">Login</button>
+                            <br>
+                            <button  style="background-color: Cyan;" class=" rounded-4">
+                            <a class="nav-link" href="index.php" >back</a>
+                            </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-          </form>
-
-          <!-- PHP Logic -->
-          <?php
-          // Set variable username dan password dummy
-          $username = "admin";
-          $password = "12345";
-
-          // Check apakah ada request dengan method POST
-          if ($_SERVER["REQUEST_METHOD"] == "POST") {
-              // Check apakah username dan password yang di POST sama dengan data dummy
-              if ($_POST['user'] == $username && $_POST['pass'] == $password) {
-                  echo '
-                  <div class="alert alert-success mt-3 rounded-4">
-                    <strong>Login Berhasil!</strong> Selamat datang, ' . htmlspecialchars($username) . '.
-                  </div>';
-              } else {
-                  echo '
-                  <div class="alert alert-danger mt-3 rounded-4">
-                    <strong>Login Gagal!</strong> Username atau password salah.
-                  </div>';
-              }
-          }
-          ?>
         </div>
-      </div>
     </div>
-  </div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-</div>
+
+<?php
+//set variable username dan password dummy
+$username = "admin";
+$password = "123456";
+
+//check apakah ada request dengan method POST yang dilakukan
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    //tampilkan isi dari variable array POST menggunakan perulangan
+    foreach($_POST as $key => $val){
+        echo $key . " : " . $val ."<br>";
+    } 
+
+    //check apakah username dan password yang di POST sama dengan data dummy
+    if($_POST['user'] == $username AND $_POST['pass'] == $password){
+        echo "Username dan Password Benar";
+    }else{
+        echo "Username dan Password Salah";
+    }
+};
+?>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
 
 
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-  crossorigin="anonymous"
-></script>
 
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

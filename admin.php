@@ -14,7 +14,7 @@ if (!isset($_SESSION['username'])) {
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Daily Journal | Admin</title>
+    <title>Jennas'Studio | Admin</title>
     <link rel="icon" href="img/logo.png" />
     <link
     rel="stylesheet"
@@ -30,9 +30,9 @@ if (!isset($_SESSION['username'])) {
 </head>
 <body>
     <!-- nav begin -->
-    <nav style="background-color: rgb(4, 212, 160);"class="navbar navbar-expand-sm  ">
+    <nav style="background-color: rgb(4, 212, 160);" class="navbar navbar-expand-sm sticky-top ">
     <div class="container">
-        <a class="navbar-brand" href="">Valorant Shop</a>
+        <a class="navbar-brand" href=".">Toko Valorant</a>
         <button
         class="navbar-toggler"
         type="button"
@@ -46,17 +46,21 @@ if (!isset($_SESSION['username'])) {
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-dark">
-        <li class="nav-item">
-          <a class="nav-link" href="admin.php?page=dashboard">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="admin.php?page=article">Article</a>
-        </li>
+            <li class="nav-item">
+                <a class="nav-link" href="admin.php?page=dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="admin.php?page=article">Article</a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link" href="admin.php?page=gallery">Gallery</a>
+            </li> 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <?= $_SESSION['username']?>
                 </a>
                 <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="admin.php?page=profile">Profile Admin</a></li>
                     <li><a class="dropdown-item" href="logout.php">Logout</a></li> 
                 </ul>
             </li> 
@@ -66,22 +70,23 @@ if (!isset($_SESSION['username'])) {
     </nav>
     <!-- nav end -->
     <!-- content begin -->
-<section id="content" class="p-5">
-    <div class="container">
-        <?php
-        if(isset($_GET['page'])){
-        ?>
-            <h4 class="lead display-6 pb-2 border-bottom border-danger-subtle"><?= ucfirst($_GET['page'])?></h4>
+    <section id="content" class="p-5">
+        <div class="container">
             <?php
-            include($_GET['page'].".php");
-        }else{
-        ?>
-            <h4 class="lead display-6 pb-2 border-bottom border-danger-subtle">Dashboard</h4>
-            <?php
-            include("dashboard.php");
-        }
-        ?>
-    </div>
+            if(isset($_GET['page'])){
+            ?>
+                <h4 class="lead display-6 pb-2 border-bottom border-danger-subtle"><?= ucfirst($_GET['page'])?></h4>
+                <?php
+                include($_GET['page'].".php");
+            }else{
+            ?>
+                <h4 class="lead display-6 pb-2 border-bottom border-danger-subtle">Dashboard</h4>
+                <?php
+                include("dashboard.php");
+            }
+            ?>
+        </div>
+    </section>
     <br>
     <br>
     <br>
@@ -90,20 +95,16 @@ if (!isset($_SESSION['username'])) {
     <br>
     <br>
     <br>
-</section>
-<!-- content end -->
+    <br>
+    <br>
+    <br>
+    <!-- content end -->
     <!-- footer begin -->
-    <footer style="background-color: rgb(4, 212, 160);"class="text-center p-5 ">
+    <footer style="background-color: rgb(4, 212, 160);"class="text-center p-5 fixed-bottom  ">
     <div>
-        <a href="https://www.instagram.com/udinusofficial"
-        ><i class="bi bi-instagram h2 p-2 text-dark"></i
-        ></a>
-        <a href="https://twitter.com/udinusofficial"
-        ><i class="bi bi-twitter h2 p-2 text-dark"></i
-        ></a>
-        <a href="https://wa.me/+62812685577"
-        ><i class="bi bi-whatsapp h2 p-2 text-dark"></i
-        ></a>
+    <a href="https://www.instagram.com/__ymiya/profilecard/?igsh=YzBpNTQwZzMzNm16"><i class="bi bi-instagram h2 p-2 text-dark"></i></a>
+    <a href="https://wa.me/+6285385159100"><i class="bi bi-whatsapp h2 p-2 text-dark"></i></a>
+    <a href="https://x.com/i/flow/login"><i class="bi bi-twitter h2 p-2 text-dark"></i></a>
     </div>
     <div>Kent Pradana Diharto &copy; 2024</div>
     </footer>
