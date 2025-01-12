@@ -103,7 +103,7 @@ include "koneksi.php";
         <nav style="background-color: rgb(4, 212, 160); color: white; " class="navbar navbar-expand-lg  fixed-top">
         <div class="container" >
         <a class="navbar-brand" href="#">
-                <img src="img/Logo.jpg" alt="Logo" width="60" height="60" class="d-inline-block align-text-center me-2">
+                <img src="img/1736687171_Logo.jpg" alt="Logo" width="60" height="60" class="d-inline-block align-text-center me-2">
                 Toko Valorant
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -169,7 +169,7 @@ include "koneksi.php";
         <!--article begin-->
           <section id="article" class="text-center p-5">
             <div class="container">
-              <h1 class="fw-bold display-4 pb-3"><Article></Article></h1>
+              <h1 class="fw-bold display-4 pb-3">Article</h1>
               <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
                 <?php
                 $sql = "SELECT * FROM article ORDER BY tanggal DESC";
