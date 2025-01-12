@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="card border-0 shadow rounded-5">
                     <div class="card-body">
                         <div class="text-center mb-3">
-                            <img src="img/Logo.jpg" alt="Logo" width="60" height="60">
+                            <img src="img//1736687171_Logo.jpg" alt="Logo" width="60" height="60">
                             <p>Welcome To Toko Valorant</p>
                             <hr/>
                         </div>
